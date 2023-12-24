@@ -1,0 +1,58 @@
+1) 
+SELECT *
+FROM Managers
+WHERE Phone IS NOT NULL AND Phone != '';
+========================================
+
+2) SELECT COUNT(*) AS SalesCount
+FROM Sells
+WHERE Date = '2021-06-20';
+========================================
+
+3) 
+SELECT AVG(Sells.Sum) AS AverageSale
+FROM Sells
+JOIN Products ON Sells.ID_Prod = Products.ID
+WHERE Products.Name = 'Фанера';
+========================================
+
+4)
+SELECT Managers.Fio AS ManagerName, SUM(Sells.Sum) AS TotalSales
+FROM Sells
+JOIN Products ON Sells.ID_Prod = Products.ID
+JOIN Managers ON Sells.ID_Manag = Managers.ID
+WHERE Products.Name = 'ОСБ'
+GROUP BY Managers.Fio;
+========================================
+
+5)
+SELECT Managers.Fio AS ManagerName, Products.Name AS ProductName
+FROM Sells
+JOIN Managers ON Sells.ID_Manag = Managers.ID
+JOIN Products ON Sells.ID_Prod = Products.ID
+WHERE Sells.Date = '2021-08-22';
+========================================
+
+6)
+SELECT ID, Name, Cost
+FROM Products
+WHERE Name LIKE '%Фанера%' AND Cost >= 1750;
+========================================
+
+7)
+SELECT
+    DATE_FORMAT(Sells.Date, '%Y-%m') AS SaleMonth,
+    Products.Name AS ProductName,
+    SUM(Sells.Count) AS TotalCount,
+    SUM(Sells.Sum) AS TotalSum
+FROM Sells
+JOIN Products ON Sells.ID_Prod = Products.ID
+GROUP BY SaleMonth, ProductName
+ORDER BY SaleMonth, ProductName;
+========================================
+
+8)
+SELECT Name, COUNT(*) AS RepetitionCount
+FROM Products
+GROUP BY Name
+HAVING COUNT(*) > 1;

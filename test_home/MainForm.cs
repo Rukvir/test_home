@@ -8,21 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Linq; //библиотека для работы с данными в формате JSON
 
 namespace test_home
 {
     public partial class MainForm : Form
     {
-        private const string ApiKey = "c0f8ad91448e30cbc165087eac292b3d";
+        private const string ApiKey = "Ваш_Ключ"; // подставьте свой ключ
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnGetWeather_Click(object sender, EventArgs e)
@@ -38,10 +33,10 @@ namespace test_home
 
             try
             {
-                using (WebClient client = new WebClient())
+                using (WebClient client = new WebClient()) // Создаем экземпляр WebClient.
                 {
-                    string json = client.DownloadString(apiUrl);
-                    dynamic data = JObject.Parse(json);
+                    string json = client.DownloadString(apiUrl); //Выполняем запрос на внешний веб-сервер
+                    dynamic data = JObject.Parse(json); // разбираем JSON-строки в объект dynamic
 
                     string temperature = $"{data.main.temp} °C";
                     string description = data.weather[0].description;
@@ -52,7 +47,7 @@ namespace test_home
                     labelWindSpeed.Text = $"Скорость ветра: {windSpeed}";
                 }
             }
-            catch (WebException)
+            catch (WebException) // обработка ошибок, если проблемы с веб-запросом, выводим ошибку
             {
                 MessageBox.Show("Ошибка при получении данных. Проверьте подключение к интернету или правильность ввода города.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
