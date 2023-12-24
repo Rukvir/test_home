@@ -1,0 +1,14 @@
+D:\CODE\Тестовое задание погода\test_home\test_home\bin\Debug\test_home.exe.config
+D:\CODE\Тестовое задание погода\test_home\test_home\bin\Debug\test_home.exe
+D:\CODE\Тестовое задание погода\test_home\test_home\bin\Debug\test_home.pdb
+D:\CODE\Тестовое задание погода\test_home\test_home\bin\Debug\Newtonsoft.Json.xml
+D:\CODE\Тестовое задание погода\test_home\test_home\obj\Debug\test_home.csproj.AssemblyReference.cache
+D:\CODE\Тестовое задание погода\test_home\test_home\obj\Debug\test_home.MainForm.resources
+D:\CODE\Тестовое задание погода\test_home\test_home\obj\Debug\test_home.Properties.Resources.resources
+D:\CODE\Тестовое задание погода\test_home\test_home\obj\Debug\test_home.csproj.GenerateResource.cache
+D:\CODE\Тестовое задание погода\test_home\test_home\obj\Debug\test_home.csproj.CoreCompileInputs.cache
+D:\CODE\Тестовое задание погода\test_home\test_home\obj\Debug\test_home.csproj.CopyComplete
+D:\CODE\Тестовое задание погода\test_home\test_home\obj\Debug\test_home.exe
+D:\CODE\Тестовое задание погода\test_home\test_home\obj\Debug\test_home.pdb
+D:\CODE\Тестовое задание погода\test_home\test_home\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\CODE\Тестовое задание погода\test_home\test_home\obj\Debug\test_home.csproj.Fody.CopyLocal.cache
